@@ -1,0 +1,260 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+a{
+  text-decoration: none
+}
+
+
+
+
+#wrap {
+  width: 1024px;
+  margin: 0 auto;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  background: #E1E1E1;
+  padding-bottom: 63px;
+}
+/* menu bar */
+#menu-bar {
+  height: 76px;
+  background: #4A90E2;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+#menu-bar a {
+  display: block;
+  width: 160px;
+  height: 28px;
+  color: #00408B;
+  font-size: 24px;
+  text-align: center;
+  padding-top: 23px;
+  padding-bottom: 20px;
+  margin: 0 30px;
+}
+.focus {
+  border-bottom: 5px solid #00408B;
+  color: white !important;
+}
+
+/* 新增task區塊(新增task按鈕 + 填寫task區塊)*/
+#add-task {
+  width: 620px;
+  margin: 24px 202px;
+}
+
+/* 新增task按鈕 */
+#add {
+  width: 100%;
+  height: 65px;
+  font-size: 24px;
+  text-align: left;
+  color: #C8C8C8;
+  background: #fff;
+  border: 2px solid #C8C8C8;
+  border-radius: 5px;
+  padding-left: 33px;
+  cursor: pointer;
+}
+
+/* 填寫task區塊 */
+#add-block {
+  background: #F2F2F2;
+  box-shadow: 0 4px 4px 0 #C8C8C8;
+  border-radius: 5px;
+  display: none;
+}
+
+/* task title*/
+#task-title {
+  height: 76px;
+  font-size: 24px;
+  padding: 0 32px;
+  border-bottom: 2px solid #C8C8C8;;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.check-box {
+  width: 24px;
+  height: 24px;
+  margin-right: 16px;
+}
+#title {
+  width: 420px;
+  border: none;
+  background: #F2F2F2;
+  font-size: 24px;
+  outline: none;
+  margin-right: 32px;
+}
+.fa-pen {
+  color: #4A90E2;
+  margin-right: 32px;
+}
+.fa-star {
+  margin-right: 32px;
+  cursor: pointer;
+}
+.priority {
+  color: #F5A623;
+}
+
+/* task info */
+.info {
+  font-size: 20px;
+  margin-left: 72px;
+  margin-top: 24px;
+}
+.icon {
+  margin-right: 9px;
+}
+#date, #time {
+  width: 150px;
+  height: 35px;
+  border: none;
+  outline: none;
+  padding: 8px 10px;
+  margin-top: 8px;
+  border-radius: 4px;
+  font-size: 16px;
+  color: #3a3838;
+}
+#date {
+  margin-left: 30px;
+}
+#time {
+  margin-left: 8px;
+}
+#comment {
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  font-size: 16px;
+  margin-left: 30px;
+  margin-top: 8px;
+  padding: 8px 16px;
+}
+
+/* task btns*/
+#btns {
+  height: 60px;
+  margin-top: 24px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+  font-size: 24px;
+}
+#cancel-btn {
+  width: 310px;
+  height: 100%;
+  background: #fff;
+  color: #D0021B;
+  border-radius: 4px;
+}
+#add-btn {
+  width: 310px;
+  height: 100%;
+  background: #4A90E2;
+  color: #fff;
+  border-radius: 4px;
+}
+#btns p {
+  padding: 16px 0;
+}
+
+/* task list*/
+#task-list {
+  width: 620px;
+  margin-top: 24px;
+  display: none;
+}
+.item {
+  background: #F2F2F2;
+  margin-bottom: 8px;
+  padding: 24px 0;
+  padding-left: 32px;
+  font-size: 24px;
+  border-radius: 5px;
+}
+.item-title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.item-title p{
+  width: 420px;
+}
+#not-editing {
+  color: #000;
+}
+.completed {
+  color: #9B9B9B;
+  text-decoration: line-through;
+}
+#item-infos {
+  display: flex;
+  flex-direction: column;
+  color: #757575;
+  font-size: 16px;
+  padding-left: 48px;
+}
+.item-info {
+  padding-right: 16px;
+  padding-top: 5px;
+}
+.top-priority {
+  background: #FFF2DC !important;
+}
+.item-id {
+  display: none;
+}

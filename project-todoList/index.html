@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>practice-todoList</title>
+
+	<!-- my css -->
+	<link rel="stylesheet" href="css/style.css">
+
+	<!-- font awesome css -->
+	<link rel="stylesheet" href="css/all.min.css">
+
+	<!-- jQuery -->
+	<script src="js/jquery-3.6.0.js"></script>
+	<script src="js/all.js"></script>
+	
+</head>
+<body>
+	<div id="wrap">
+		<div id="menu-bar">
+			<a href="#" class="focus" id="my-task">My Tasks</a>
+			<a href="#" id="in-progress">In Progress</a>
+			<a href="#" id="completed-page">Completed</a>
+		</div>
+
+		<div id="add-task">
+			<input type="button" value="+ Add Task" id="add">
+			<div id="add-block">
+				<div id="task-title">
+					<input type="checkbox" class="check-box">
+					<input type="text" id="title" placeholder="Type Somthing Here...">
+					<i class="far fa-star" id="priority"></i>
+					<i class="fas fa-pen" id="edit"></i>
+				</div>
+				<div id="task-info">
+					<div class="info">
+						<p><i class="far fa-calendar-alt icon"></i> Deadline</p>
+						<input type="date" id="date">
+						<input type="time" id="time">
+					</div>
+					<div class="info">
+						<p><i class="far fa-comment-dots icon"></i> Comment</p>
+						<textarea id="comment" cols="35" rows="5" placeholder="Type your memo here..."></textarea>
+					</div>
+				</div>
+				<div id="btns">
+					<a href="#" id="cancel-btn">
+						<p><i class="fas fa-times"></i> Cancel</p>
+					</a>
+					<a href="#" id="add-btn">
+						<p><i class="fas fa-plus"></i> Add Task</p>
+					</a>
+				</div>
+			</div>
+			<div id="task-list">
+			</div>
+		</div>
+
+	</div>
+</body>
+</html>
